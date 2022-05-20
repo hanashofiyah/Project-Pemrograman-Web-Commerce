@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PesanController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HistoryController;
+// use Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +38,7 @@ Route::post('profile', 'ProfileController@update');
 
 Route::get('history', 'HistoryController@index');
 Route::get('history/{id}', 'HistoryController@detail');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
