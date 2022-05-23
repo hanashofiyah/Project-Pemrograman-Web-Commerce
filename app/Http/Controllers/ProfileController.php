@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Auth;
 use Alert;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -38,7 +38,7 @@ class ProfileController extends Controller
     	
     	$user->update();
 
-    	Alert::success('User Sukses diupdate', 'Success');
+    	// Alert::success('User Sukses diupdate', 'Success');
     	return redirect('profile');
     }
 }

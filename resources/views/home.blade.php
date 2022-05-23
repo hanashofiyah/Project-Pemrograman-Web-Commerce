@@ -11,7 +11,7 @@
             <img src="{{ url('images/logo.png') }}" class="rounded mx-auto d-block" width="700" alt="">
         </div>
         @foreach($barangs as $barang)
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card">
               <img src="{{ url('uploads') }}/{{ $barang->gambar }}" class="card-img-top" alt="...">
               <div class="card-body">
@@ -19,9 +19,9 @@
                 <p class="card-text">
                     <strong>Harga :</strong> Rp. {{ number_format($barang->harga)}} <br>
                     <strong>Stok :</strong> {{ $barang->stok }} <br>
-                    <hr>
+                    {{-- <hr>
                     <strong>Keterangan :</strong> <br>
-                    {{ $barang->keterangan }} 
+                    {{ $barang->keterangan }}  --}}
                 </p>
                 <a href="{{ url('pesan') }}/{{ $barang->id }}" class="btn btn-primary"><i class="bi bi-cart-fill"></i> Pesan</a>
               </div>

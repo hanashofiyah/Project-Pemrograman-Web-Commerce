@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Barang;
-use App\Pesanan;
-use App\User;
-use App\PesananDetail;
+use App\Models\Barang;
+use App\Models\Pesanan;
+use App\Models\User;
+use App\Models\PesananDetail;
 use Auth;
 use Alert;
 use Illuminate\Http\Request;

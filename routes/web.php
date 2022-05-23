@@ -1,4 +1,10 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PesanController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HistoryController;
+// use Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,18 +23,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/pesan/{id}', [App\Http\Controllers\PesanController::class, 'index']);
-Route::post('pesan/{id}', 'PesanController@pesan');
-Route::get('check-out', 'PesanController@check_out');
-Route::delete('check-out/{id}', 'PesanController@delete');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/pesan/{id}', [PesanController::class, 'index'])->name('pesan');
+Route::post('/pesan/{id}', [PesanController::class, 'pesan']);
 
-Route::get('konfirmasi-check-out', 'PesanController@konfirmasi');
+Route::get('/check-out', [PesanController::class, 'check_out'])->name('check_out');
+Route::delete('/check-out/{id}', [PesanController::class, 'delete']);
+Route::get('/konfirmasi-check-out', [PesanController::class, 'konfirmasi'])->name('konfirmasi');
 
 // Route::get('profile', 'ProfileController@index');
-Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index']);
-Route::post('profile', [App\Http\Controllers\ProfileController::class, 'index']);
-Route::post('profile', 'ProfileController@update');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::post('/profile', [ProfileController::class, 'index']);
+Route::post('/profile', [ProfileController::class, 'update']);
 
-Route::get('history', 'HistoryController@index');
-Route::get('history/{id}', 'HistoryController@detail');
+Route::get('/history', [HistoryController::class, 'index'])->name('history');
+Route::get('/history/{id}', [HistoryController::class, 'detail']);

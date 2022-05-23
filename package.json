@@ -26,11 +26,14 @@
     },
     "babel": {
         "presets": [
-          "@babel/preset-react",
-          "@babel/preset-env"
+            "@babel/preset-react",
+            "@babel/preset-env"
         ],
         "plugins": [
-          "@babel/plugin-transform-react-jsx"
+            "@babel/plugin-transform-react-jsx"
         ]
-      }
+    },
+    "dependencies": {
+        "sweetalert": "^2.1.2"
+    }
 }

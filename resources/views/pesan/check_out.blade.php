@@ -5,14 +5,14 @@
         <div class="col-md-12">
             <a href="{{ url('home') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
         </div>
-        <div class="col-md-12 mt-2">
+        {{-- <div class="col-md-12 mt-2">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('home') }}">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Check Out</li>
                 </ol>
             </nav>
-        </div>
+        </div> --}}
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
@@ -47,7 +47,7 @@
                                     <form action="{{ url('check-out') }}/{{ $pesanan_detail->id }}" method="post">
                                         @csrf
                                         {{ method_field('DELETE') }}
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus data ?');"><i class="fa fa-trash"></i></button>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin akan menghapus data ?');"><i class="bi bi-trash"></i>Batal</button>
                                     </form>
                                 </td>
                             </tr>
