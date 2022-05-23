@@ -46,13 +46,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Masuk') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
                                 </li>
                             @endif
                         @else
@@ -78,16 +78,16 @@
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li>{{-- Error post profile --}}
-                                        <a class="dropdown-item" {{-- href="{{ route('profile') }}" --}} onclick="event.preventDefault();
-                                                                 document.getElementById('profile-post').submit();"><i
-                                                class="bi bi-person-circle"></i>
-                                            {{ __('Profile') }}
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="bi bi-person-circle"></i>
+                                            Profile
                                         </a>
-                                        {{-- <form id="profile-post" action="{{ route('profile') }}" method="POST"
-                                            class="d-none">
-                                            @csrf
-                                        </form> --}}
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('history') }}"><i class="bi bi-clock-history"></i>
+                                            Riwayat Pemesanan
+                                        </a>
                                     </li>
 
                                     <li>
