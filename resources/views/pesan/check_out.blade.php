@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h3><i class="fa fa-shopping-cart"></i> Check Out</h3>
+                    <h3><i class="fa fa-shopping-cart"></i> Keranjang</h3>
                     @if(!empty($pesanan))
                     <p align="right">Tanggal Pesan : {{ $pesanan->tanggal }}</p>
                     <table class="table table-striped">
