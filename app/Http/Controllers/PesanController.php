@@ -60,6 +60,7 @@ class PesanController extends Controller
     		$pesanan_detail = new PesananDetail;
 	    	$pesanan_detail->barang_id = $barang->id;
 	    	$pesanan_detail->pesanan_id = $pesanan_baru->id;
+            $pesanan_detail->user_id = Auth::user()->id;
 	    	$pesanan_detail->jumlah = $request->jumlah_pesan;
 	    	$pesanan_detail->jumlah_harga = $barang->harga*$request->jumlah_pesan;
 	    	$pesanan_detail->save();
